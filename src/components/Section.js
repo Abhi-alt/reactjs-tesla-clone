@@ -12,9 +12,10 @@ function Section({title, description, backgroundImg, leftBtnText, rightBtnText})
                     <LeftButton>
                         {leftBtnText}
                     </LeftButton>
-                    <RightButton>
+                    { rightBtnText && <RightButton>
                         {rightBtnText}
-                    </RightButton>
+                        </RightButton>
+                    }
                 </ButtonGroup>
                 <DownArrow src="/images/down-arrow.svg" />
             </Buttons>
@@ -44,7 +45,7 @@ const ItemText = styled.div`
 
 const ButtonGroup = styled.div`
     display: flex;
-    margin-bottom: 30px;
+    // margin-bottom: 10px;
     @media (max-width: 768px){
         flex-direction: column;
     }
